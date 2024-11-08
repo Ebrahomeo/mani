@@ -47,6 +47,62 @@
     width: 80%;
     margin:auto;
   }
+/* Chatbot Section Styles */
+.chatbot {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.chatbot h1 {
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.chat-interface {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.chat-interface input[type="text"] {
+  padding: 10px;
+  width: 300px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.chat-interface button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.chat-response {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  min-height: 50px;
+  text-align: left;
+}
+
+.chat-response p {
+  margin: 5px 0;
+  padding: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+}
+
   .hero .left img {
     width: 500px;
     height: 500px;
