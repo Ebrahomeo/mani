@@ -7,8 +7,6 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Poppins:wght@200&display=swap"
     rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet" />
@@ -17,6 +15,8 @@
 
   <title>Portfolio</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- Axios CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -26,17 +26,23 @@
       <nav class="flex items-centre justify-between">
         <div class="left flex justfiy-right">
           <div class="logo">
+            <!-- Add your logo here -->
           </div>
-          <div> <a href="">Home</a> <a href="#about">About</a> <a href="#services">Services</a> <a
-              href="https://melbite.com" target="_blank">Blog</a></li>
+          <div>
+            <a href="">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="https://melbite.com" target="_blank">Blog</a>
           </div>
         </div>
-        <div class="right"> <button class="btn btn-primary">Contact</button> </div>
+        <div class="right">
+          <button class="btn btn-primary">Contact</button>
+        </div>
       </nav>
     </div>
     <div id="hero" class="hero flex items-centre justify-between">
       <div class="left flex-1 justify-center">
-        <img src="./images/evans_profile.jpg" />
+        <img src="./images/evans_profile.jpg" alt="Evans Profile" />
       </div>
       <div class="right flex-1">
         <h6>Evans Mutuku</h6>
@@ -46,7 +52,7 @@
           & Founder
         </h1>
         <p>
-          Based in Nairobi Kenya. Web dev, instructor & mentor . I eat, sleep and breathe React. Am a proclaimed
+          Based in Nairobi Kenya. Web dev, instructor & mentor. I eat, sleep and breathe React. Am a proclaimed
           self-taught fullstack Javascript developer with knowledge in Javascript, ReactJs, NodeJs
         </p>
         <div><button class="btn btn-secondary">DOWNLOAD CV</button></div>
@@ -66,30 +72,31 @@
           Hi there! I am Evans! You might also know me as Javascript Developer. I've been programming for over 4 years
           now as a Full Stack developer. I've worked both with startups and individuals to help build & scale their
           businesses. Along the journey I realised my passion existed in helping others excel and pursue their dreams as
-          upcoming developers.Hence mentoring and teaching how to code.
+          upcoming developers. Hence mentoring and teaching how to code.
         </p>
         <div class="socials">
-          <a href="#"><img src="./images/evans.jpg" width="40px" /></a>
-          <a href="#"><img src="./images/evans_profile.jpg" width="40px" /></a>
+          <a href="#"><img src="./images/evans.jpg" width="40px" alt="Social 1" /></a>
+          <a href="#"><img src="./images/evans_profile.jpg" width="40px" alt="Social 2" /></a>
         </div>
       </div>
     </div>
   </section>
+
   <section id="services" class="services">
     <div class="container">
       <h1 class="services-head">Services</h1>
       <p>All your digital needs... covered.</p>
       <div class="card-grid">
         <div class="card">
-          <img src="https://source.unsplash.com/1600x900/?nature,water" />
-          <h2>Graphic Desgin</h2>
+          <img src="https://source.unsplash.com/1600x900/?nature,water" alt="Graphic Design" />
+          <h2>Graphic Design</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Nulla, debitis?
           </p>
         </div>
         <div class="card">
-          <img src="https://source.unsplash.com/1600x900/?boy,men" />
+          <img src="https://source.unsplash.com/1600x900/?boy,men" alt="Web Development" />
           <h2>Web Development</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -97,13 +104,27 @@
           </p>
         </div>
         <div class="card">
-          <img src="https://source.unsplash.com/1600x900/?car,bike" />
+          <img src="https://source.unsplash.com/1600x900/?car,bike" alt="Content Writing" />
           <h2>Content Writing</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Nulla, debitis?
           </p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chatbot Section -->
+  <section id="chatbot" class="chatbot">
+    <div class="container">
+      <h1>Chat with Our Assistant</h1>
+      <div class="chat-interface">
+        <input type="text" id="userInput" placeholder="Type your message here" />
+        <button id="sendButton">Send</button>
+      </div>
+      <div id="chatResponse" class="chat-response">
+        <!-- Chatbot responses will appear here -->
       </div>
     </div>
   </section>
@@ -131,20 +152,18 @@
       </div>
       <div class="right-side">
         <div class="topic-text">Send us a message</div>
-        <p>If you have any work from me or any types of quries related to my tutorial, you can send me message from
+        <p>If you have any work from me or any types of queries related to my tutorial, you can send me a message from
           here. It's my pleasure to help you.</p>
         <form action="#">
           <div class="input-box">
-            <input type="text" placeholder="Enter your name">
+            <input type="text" placeholder="Enter your name" required>
           </div>
           <div class="input-box">
-            <input type="text" placeholder="Enter your email">
+            <input type="email" placeholder="Enter your email" required>
           </div>
-          <textarea class="input-box message-box" placeholder="message">
-
-          </textarea>
+          <textarea class="input-box message-box" placeholder="Your message" required></textarea>
           <div class="button">
-            <input type="button" value="Send Now">
+            <input type="submit" value="Send Now">
           </div>
         </form>
       </div>
@@ -190,7 +209,7 @@
           exclusive offers.
         </p>
         <form action="#">
-          <input type="text" placeholder="Your email" required>
+          <input type="email" placeholder="Your email" required>
           <button type="submit">SUBSCRIBE</button>
         </form>
         <div class="icons">
@@ -203,6 +222,87 @@
     </div>
   </section>
 
+  <!-- Chatbot JavaScript -->
+  <script>
+    let session_id;
+
+    // Start a chat session to get the session ID
+    async function startChatSession() {
+      try {
+        const chatSession = await axios.post(
+          'https://agentivehub.com/api/chat/session',
+          {
+            "api_key": "f082e4c5-a27f-4982-bc0d-04f692794f99",
+            "assistant_id": "69853a49-410e-47ee-a78c-15c64b76ce2c",
+          }
+        );
+
+        session_id = chatSession.data.session_id;
+        console.log("Session ID:", session_id);
+        // Optionally, you can send an initial message here
+      } catch (error) {
+        console.error("Error starting chat session:", error);
+        document.getElementById("chatResponse").innerText = "Error: Unable to start chat session.";
+      }
+    }
+
+    // Send the user message to the chatbot API
+    async function sendMessage() {
+      const userMessage = document.getElementById("userInput").value.trim();
+
+      if (userMessage === "") {
+        alert("Please enter a message.");
+        return;
+      }
+
+      if (!session_id) {
+        document.getElementById("chatResponse").innerText = "Initializing session. Please wait...";
+        await startChatSession();
+        return;
+      }
+
+      const chatRequest = {
+        api_key: "f082e4c5-a27f-4982-bc0d-04f692794f99",
+        session_id: session_id,
+        type: 'custom_code',
+        assistant_id: "69853a49-410e-47ee-a78c-15c64b76ce2c",
+        messages: [{ role: 'user', content: userMessage }]
+      };
+
+      try {
+        const chat = await axios.post(
+          'https://agentivehub.com/api/chat',
+          chatRequest
+        );
+        const responseContent = chat.data.message || "No response received.";
+        displayResponse(responseContent);
+      } catch (error) {
+        console.error("Error sending message:", error);
+        document.getElementById("chatResponse").innerText = "Error: Unable to get a response.";
+      }
+    }
+
+    // Display chatbot response
+    function displayResponse(message) {
+      const chatResponse = document.getElementById("chatResponse");
+      const responseElement = document.createElement("p");
+      responseElement.textContent = message;
+      chatResponse.appendChild(responseElement);
+    }
+
+    // Initialize chat session on page load
+    window.onload = startChatSession;
+
+    // Add event listener for the send button
+    document.getElementById("sendButton").addEventListener("click", sendMessage);
+
+    // Optional: Allow sending message on Enter key press
+    document.getElementById("userInput").addEventListener("keypress", function (e) {
+      if (e.key === 'Enter') {
+        sendMessage();
+      }
+    });
+  </script>
 </body>
 
 </html>
